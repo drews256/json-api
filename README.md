@@ -7,7 +7,7 @@ Use:
 
 With JSON API conformant JSON
 
-```
+```js
 const json = {
   'data': [{
     'type': 'articles',
@@ -18,21 +18,21 @@ const json = {
 }
 
 const jsonApi = new activeJsonApi('example')
-//Updating the Store adds the JSON to the store namespaced utilizing the Resources type
+// Updating the Store adds the JSON to the store namespaced utilizing the Resources type
 jsonApi.updateStore(json)
 
-//Simple Getters allow you to grab resources
+// Simple Getters allow you to grab resources
 
-//State of the store
+// State of the store
 jsonApi.store.getState() =  { 'articles' : [ { object Object } ] }
 
-//Resources by id
+// Resources by id
 jsonApi.getObject('articles', 2) = json
 
-//All Resources by resource type
+// All Resources by resource type
 jsonApi.getAll('articles') = [ { object Object } ]
 
-//It keeps the state consistent no matter how many times you load JSON into the store
+// It keeps the state consistent no matter how many times you load JSON into the store
 jsonApi.updateStore(json)
 
 // It merges objects by ID when you update the store with objects that have the same ID

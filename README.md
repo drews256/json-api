@@ -1,4 +1,8 @@
-# JSON API Spec
+A consumer library that handles the consumption of a JSON API.
+
+This library handles the consumption of JSON returned from an external JSON API and *not* the CRUD actions around communicating with a JSON API conformant API.
+
+JSON API Spec:
 http://jsonapi.org/
 
 uses the JSON API and stores resources in a Redux Store.
